@@ -1,18 +1,14 @@
 ---
 name: Pivotal Tracker
 x-slug: pivotal-tracker
-description: Writing software isn&rsquo;t half as hard as all the talking, emails,
-  and meetings needed to reconcile shifting requirements and slipping deadlines. We
-  get it, we&rsquo;ve been there. In fact, we&rsquo;re still there. Were Pivotal Labs,
-  a web and mobile development consultancy. In 2006 we built Tracker for our developers
-  and clients to facilitate constructive communication, reflect the status of a project
-  and help forecast its future. Today Tracker is a staple of the developers toolkit.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/pivotal-tracker.png
+description: Pivotal Tracker is the agile project management tool of choice for developers
+  around the world for real-time collaboration around a shared, prioritized backlog.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11526-pivotal-tracker.jpg
 x-kinRank: "7"
-x-alexaRank: "0"
+x-alexaRank: "15894"
 tags: Tokens
-created: "2018-06-20"
-modified: "2018-06-20"
+created: "2018-06-25"
+modified: "2018-06-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/pivotal-tracker/apis.md
 specificationVersion: "0.14"
 apis:
@@ -20,7 +16,7 @@ apis:
   x-api-slug: pivotal-tracker
   description: Returns an API token associated with the user. This method requires
     HTTP Basic authentication.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/pivotal-tracker.png
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11526-pivotal-tracker.jpg
   humanURL: http://pivotaltracker.com
   baseURL: https://www.pivotaltracker.com//services/v3///tokens/active
   tags: Tokens,Active
@@ -32,7 +28,7 @@ apis:
 - name: Pivotal Tracker Post Tokens Active
   x-api-slug: pivotal-tracker
   description: Returns an API token associated with the user.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/pivotal-tracker.png
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11526-pivotal-tracker.jpg
   humanURL: http://pivotaltracker.com
   baseURL: https://www.pivotaltracker.com//services/v3///tokens/active
   tags: Tokens,Active
@@ -45,7 +41,7 @@ apis:
   x-api-slug: pivotal-tracker
   description: Whether welding together two apps or forging a unique one, tap into
     100% of the Tracker feature set with the very same API the Tracker team uses.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/pivotal-tracker.png
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11526-pivotal-tracker.jpg
   humanURL: http://pivotaltracker.com
   baseURL: https://www.pivotaltracker.com//services/v3/
   tags: Tokens
@@ -57,12 +53,16 @@ x-common:
   url: http://www.pivotaltracker.com/community/tracker-blog
 - type: x-blog
   url: http://www.pivotaltracker.com/feed
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/pivotaltracker
 - type: x-email
   url: TRACKER@PIVOTAL.IO
 - type: x-faq
   url: https://www.pivotaltracker.com/faq
 - type: x-github
   url: https://github.com/pivotal
+- type: x-linkedin
+  url: https://www.linkedin.com/showcase/pivotal-tracker/
 - type: x-pricing
   url: http://www.pivotaltracker.com/why-tracker/pricing
 - type: x-selfservice-registration
