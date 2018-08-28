@@ -8,59 +8,51 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "9"
 x-alexaRank: "0"
 tags: Tokens
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/respoke/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Respoke REST API Session Tokens
-  x-api-slug: respoke-rest-api
+- name: Respoke REST API - Session Tokens
+  x-api-slug: sessiontokens-post
   description: An end-user client posts a tokenId from POST [base]/tokens to authenticate
     to an app as endpointId.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/respoke-web-communications-300x101.jpg
   humanURL: https://www.respoke.io
-  baseURL: https://api.respoke.io/v1//session-tokens/
-  tags: Session,Tokens
+  baseURL: https://api.respoke.io/v1/
+  tags: Target, Change Log Example, Voice, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/respoke/sessiontokens-post-openapi.md
-- name: Respoke REST API Tokens
-  x-api-slug: respoke-rest-api
+- name: Respoke REST API - Tokens
+  x-api-slug: tokens-post
   description: Get an access token tokenId for an end-user.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/respoke-web-communications-300x101.jpg
   humanURL: https://www.respoke.io
-  baseURL: https://api.respoke.io/v1//tokens/
-  tags: Tokens
+  baseURL: https://api.respoke.io/v1/
+  tags: Target, Change Log Example, Voice, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/respoke/tokens-post-openapi.md
-- name: Respoke REST API Tokens
-  x-api-slug: respoke-rest-api
+- name: Respoke REST API - Tokens
+  x-api-slug: tokens-put
   description: By using the App-Secret header, you can perform API calls to obtain
     Respoke sessions for your users via POST to [base]/tokens. App-Secrets are found
     in the Dev Console.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/respoke-web-communications-300x101.jpg
   humanURL: https://www.respoke.io
-  baseURL: https://api.respoke.io/v1//tokens/
-  tags: Tokens
+  baseURL: https://api.respoke.io/v1/
+  tags: Target, Change Log Example, Voice, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/respoke/tokens-put-openapi.md
-- name: Respoke REST API
-  x-api-slug: respoke-rest-api
-  description: Respoke makes it incredibly easy to add real-time communications capabilities
-    to the things you build. Integrate text chat, audio calling, video collaboration,
-    screen sharing, and peer-to-peer data with just a few lines of JavaScript.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/respoke-web-communications-300x101.jpg
-  humanURL: https://www.respoke.io
-  baseURL: https://api.respoke.io/v1/
-  tags: Tokens
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/respoke/openapi.md
 x-common:
 - type: x-account-management
   url: https://portal.respoke.io/#/account?section=Profile
+- type: x-api-gallery
+  url: http://request.baskets.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://respoke.stack.network
 - type: x-application-management
   url: https://portal.respoke.io/#/apps
 - type: x-authentication

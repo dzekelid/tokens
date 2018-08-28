@@ -79,6 +79,43 @@ paths:
       tags:
       - Authentication
       - Access Tokens
+  /apps/{accessTokens}/de-authenticate:
+    get:
+      summary: De-Authenticate Token
+      description: "Passing valid access_tokens to this method causes the application
+        that created them to be de-authorized by the user associated with each access_token.
+        This will remove the application from their apps tab, and cause all other
+        existing access_tokens to be destroyed.\n \nThis method is meant for uninstalling
+        applications, recovering from access_token leaks, or simply as a stronger
+        form of /access-tokens/{accessTokens}/invalidate.\n \nNothing prevents a user
+        from re-authenticate to an application that has de-authenticated itself, the
+        user will be prompted to approve the application again however.\n \n{accessTokens}
+        can contain up to 20 access tokens. These are obtained by authenticating a
+        user using OAuth 2.0.\n \nThis method returns a list of access_tokens."
+      operationId: passing-valid-access-tokens-to-this-method-causes-the-application-that-created-them-to-be-deauthoriz
+      x-api-path-slug: appsaccesstokensdeauthenticate-get
+      parameters:
+      - in: path
+        name: accessTokens
+        description: String list (semicolon delimited)
+      - in: query
+        name: callback
+        description: All API responses are JSON, we do support JSONP with the callback
+          query parameter
+      - in: query
+        name: filter
+        description: '#DiscussionThe Stack Exchange API allows applications to exclude
+          almost every field returned'
+      - in: query
+        name: page
+      - in: query
+        name: pagesize
+      responses:
+        200:
+          description: OK
+      tags:
+      - Authentication
+      - Access Tokens
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

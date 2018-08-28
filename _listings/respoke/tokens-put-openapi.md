@@ -3,7 +3,7 @@ swagger: "2.0"
 x-collection-name: Respoke
 x-complete: 0
 info:
-  title: Respoke REST API Tokens
+  title: Respoke Tokens
   description: By using the App-Secret header, you can perform API calls to obtain
     Respoke sessions for your users via POST to [base]/tokens. App-Secrets are found
     in the Dev Console.

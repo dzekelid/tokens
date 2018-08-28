@@ -3,7 +3,7 @@ swagger: "2.0"
 x-collection-name: Respoke
 x-complete: 0
 info:
-  title: Respoke REST API Tokens
+  title: Respoke Tokens
   description: Get an access token tokenId for an end-user.
   termsOfService: https://www.respoke.io/files/respoke-tos-20141007.pdf
   version: v1

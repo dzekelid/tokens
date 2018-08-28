@@ -1,12 +1,9 @@
----
 swagger: "2.0"
 x-collection-name: Mattermost
 x-complete: 1
 info:
-  title: Mattermost API Reference
-  description: -api-v4-is-stable-with-the-mattermost-server-4-0-release--api-v3-was-deprecated-on-january-16th-2018-and-scheduled-for-removal-in-mattermost-v5-0--details-heretagapiv3deprecation--looking-for-the-api-v3-reference-it-has-moved-herehttpsapi-mattermost-comv3-
-  termsOfService: https://about.mattermost.com/default-terms/
-  version: 4.0.0
+  title: Mattermost
+  version: 1.0.0
 host: your-mattermost-url.com
 basePath: /api/v4
 schemes:
@@ -45,6 +42,32 @@ paths:
       - User
       - Access
       - Tokens
+    post:
+      summary: Create a user access token
+      description: |-
+        Generate a user access token that can be used to authenticate with the Mattermost REST API.
+
+        __Minimum server version__: 4.1
+
+        ##### Permissions
+        Must have `create_user_access_token` permission. For non-self requests, must also have the `edit_other_users` permission.
+      operationId: generate-a-user-access-token-that-can-be-used-to-authenticate-with-the-mattermost-rest-api-minimum-s
+      x-api-path-slug: usersuser-idtokens-post
+      parameters:
+      - in: body
+        name: token
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: user_id
+        description: User GUID
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - Access
+      - Token
   /users/tokens:
     get:
       summary: Get user access tokens
@@ -95,4 +118,136 @@ paths:
       tags:
       - Search
       - Tokens
----
+  /users/tokens/revoke:
+    post:
+      summary: Revoke a user access token
+      description: |-
+        Revoke a user access token and delete any sessions using the token.
+
+        __Minimum server version__: 4.1
+
+        ##### Permissions
+        Must have `revoke_user_access_token` permission. For non-self requests, must also have the `edit_other_users` permission.
+      operationId: revoke-a-user-access-token-and-delete-any-sessions-using-the-token-minimum-server-version--41-permis
+      x-api-path-slug: userstokensrevoke-post
+      parameters:
+      - in: body
+        name: token
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Revoke
+      - User
+      - Access
+      - Token
+  /users/tokens/{token_id}:
+    get:
+      summary: Get a user access token
+      description: |-
+        Get a user access token. Does not include the actual authentication token.
+
+        __Minimum server version__: 4.1
+
+        ##### Permissions
+        Must have `read_user_access_token` permission. For non-self requests, must also have the `edit_other_users` permission.
+      operationId: get-a-user-access-token-does-not-include-the-actual-authentication-token-minimum-server-version--41-
+      x-api-path-slug: userstokenstoken-id-get
+      parameters:
+      - in: path
+        name: token_id
+        description: User access token GUID
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - Access
+      - Token
+  /users/tokens/disable:
+    post:
+      summary: Disable personal access token
+      description: |-
+        Disable a personal access token and delete any sessions using the token. The token can be re-enabled using `/users/tokens/enable`.
+
+        __Minimum server version__: 4.4
+
+        ##### Permissions
+        Must have `revoke_user_access_token` permission. For non-self requests, must also have the `edit_other_users` permission.
+      operationId: disable-a-personal-access-token-and-delete-any-sessions-using-the-token-the-token-can-be-reenabled-u
+      x-api-path-slug: userstokensdisable-post
+      parameters:
+      - in: body
+        name: token
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Disable
+      - Personal
+      - Access
+      - Token
+  /users/tokens/enable:
+    post:
+      summary: Enable personal access token
+      description: |-
+        Re-enable a personal access token that has been disabled.
+
+        __Minimum server version__: 4.4
+
+        ##### Permissions
+        Must have `create_user_access_token` permission. For non-self requests, must also have the `edit_other_users` permission.
+      operationId: reenable-a-personal-access-token-that-has-been-disabled-minimum-server-version--44-permissionsmust-h
+      x-api-path-slug: userstokensenable-post
+      parameters:
+      - in: body
+        name: token
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Enable
+      - Personal
+      - Access
+      - Token
+  /webrtc/token:
+    get:
+      summary: Get WebRTC token
+      description: |-
+        Get a valid WebRTC token, STUN and TURN server URLs along with TURN credentials to use with the Mattermost WebRTC service. See https://docs.mattermost.com/administration/config-settings.html#webrtc-beta for WebRTC configutation settings. The token returned is for the current user's session.
+        ##### Permissions
+        Must be authenticated.
+      operationId: get-a-valid-webrtc-token-stun-and-turn-server-urls-along-with-turn-credentials-to-use-with-the-matte
+      x-api-path-slug: webrtctoken-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - WebRTC
+      - Token
+  /commands/{command_id}/regen_token:
+    put:
+      summary: Generate a new token
+      description: |-
+        Generate a new token for the command based on command id string.
+        ##### Permissions
+        Must have `manage_slash_commands` permission for the team the command is in.
+      operationId: generate-a-new-token-for-the-command-based-on-command-id-string-permissionsmust-have-manage-slash-co
+      x-api-path-slug: commandscommand-idregen-token-put
+      parameters:
+      - in: path
+        name: command_id
+        description: ID of the command to generate the new token
+      responses:
+        200:
+          description: OK
+      tags:
+      - Generate
+      - New
+      - Token

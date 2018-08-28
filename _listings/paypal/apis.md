@@ -7,34 +7,42 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/237-paypal
 x-kinRank: "10"
 x-alexaRank: "71"
 tags: Tokens
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/paypal/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Paypal GetAccess Token
-  x-api-slug: paypal
+- name: PayPal (Sandbox) - GetAccess Token
+  x-api-slug: permissionsgetaccesstoken-post
   description: Use the GetAccessToken API operation to obtain an access token for
     a set of permissions.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/237-paypal.jpg
   humanURL: https://paypal.com
-  baseURL: https://svcs.sandbox.paypal.com////Permissions/GetAccessToken
-  tags: Payments,Access Tokens
+  baseURL: https://svcs.sandbox.paypal.com//
+  tags: International, Payments, Billing, Merchant, Indie EdTech Data Jam, Getting
+    Started Example, Stack Network, Stack, Hypermedia API, Financial Services, Technology,
+    Mobile, SaaS, internet, Invoices, Payments, Payments, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/paypal/permissionsgetaccesstoken-post-openapi.md
-- name: Paypal
-  x-api-slug: paypal
-  description: PayPal is the faster, safer way to send money, make an online payment,
-    receive money or set up a merchant account.
+- name: PayPal (Sandbox) - GetAccess Token
+  x-api-slug: permissionsgetaccesstoken-post
+  description: Use the GetAccessToken API operation to obtain an access token for
+    a set of permissions.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/237-paypal.jpg
   humanURL: https://paypal.com
   baseURL: https://svcs.sandbox.paypal.com//
-  tags: Tokens
+  tags: International, Payments, Billing, Merchant, Indie EdTech Data Jam, Getting
+    Started Example, Stack Network, Stack, Hypermedia API, Financial Services, Technology,
+    Mobile, SaaS, internet, Invoices, Payments, Payments, Relative Data, Service API
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/paypal/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/paypal/permissionsgetaccesstoken-post-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://paylocity.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://paypal.stack.network
 - type: x-base-url
   url: https://api.paypal.com
 - type: x-crunchbase

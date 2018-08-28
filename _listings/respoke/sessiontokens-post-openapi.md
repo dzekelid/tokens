@@ -3,7 +3,7 @@ swagger: "2.0"
 x-collection-name: Respoke
 x-complete: 0
 info:
-  title: Respoke REST API Session Tokens
+  title: Respoke Session Tokens
   description: An end-user client posts a tokenId from POST [base]/tokens to authenticate
     to an app as endpointId.
   termsOfService: https://www.respoke.io/files/respoke-tos-20141007.pdf

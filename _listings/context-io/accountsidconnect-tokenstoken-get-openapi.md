@@ -161,6 +161,27 @@ paths:
       - Connect
       - Tokens
       - Token
+    delete:
+      summary: Delete Accounts Connect Tokens Token
+      description: Remove a given connect token.
+      operationId: removeAccountConnectToken_
+      x-api-path-slug: accountsidconnect-tokenstoken-delete
+      parameters:
+      - in: path
+        name: id
+        description: Unique id of an account accessible through your API key
+      - in: path
+        name: token
+        description: The unique random token used to add a second source to an existing
+          account
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+      - Connect
+      - Tokens
+      - Token
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

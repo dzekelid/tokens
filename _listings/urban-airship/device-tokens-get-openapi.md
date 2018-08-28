@@ -4,11 +4,11 @@ x-collection-name: Urban Airship
 x-complete: 0
 info:
   title: Urban Airship Get Device Tokens
-  description: "Gets information about all of your device tokens. If your application
-    has a large number of device tokens, we\u2019ll paginate the request for you.
-    By default, we paginate at 5000 device tokens. You can receive the next page simply
-    by retrieving the URL from \"next_page\" - in this way it is easy to export all
-    of your device tokens and all their data."
+  description: Gets information about all of your device tokens. If your application
+    has a large number of device tokens, we???ll paginate the request for you. By
+    default, we paginate at 5000 device tokens. You can receive the next page simply
+    by retrieving the URL from "next_page" - in this way it is easy to export all
+    of your device tokens and all their data.
   version: v3
 host: go.urbanairship.com
 basePath: /api/
@@ -41,7 +41,7 @@ paths:
       - Token
     get:
       summary: Get Device Tokens Token
-      description: "Gets a device token\u2019s alias."
+      description: Gets a device token???s alias.
       operationId: device_tokens.token.get
       x-api-path-slug: device-tokenstoken-get
       parameters:
@@ -83,11 +83,11 @@ paths:
   /device_tokens:
     get:
       summary: Get Device Tokens
-      description: "Gets information about all of your device tokens. If your application
-        has a large number of device tokens, we\u2019ll paginate the request for you.
+      description: Gets information about all of your device tokens. If your application
+        has a large number of device tokens, we???ll paginate the request for you.
         By default, we paginate at 5000 device tokens. You can receive the next page
-        simply by retrieving the URL from \"next_page\" - in this way it is easy to
-        export all of your device tokens and all their data."
+        simply by retrieving the URL from "next_page" - in this way it is easy to
+        export all of your device tokens and all their data.
       operationId: device_tokens.get
       x-api-path-slug: device-tokens-get
       parameters:

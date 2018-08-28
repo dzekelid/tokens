@@ -6,44 +6,94 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth
 x-kinRank: "9"
 x-alexaRank: "4820"
 tags: Tokens
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Auth0 Blacklists API Get Blacklists Tokens
-  x-api-slug: auth0-blacklists-api
+- name: Auth0 API - Get Blacklists Tokens
+  x-api-slug: blackliststokens-get
   description: Get blacklists tokens.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
   humanURL: https://auth0.com/
-  baseURL: https://login.auth0.com//blacklists//api/v2/blacklists/tokens
-  tags: Blacklists,Tokens
+  baseURL: https://login.auth0.com/api/v2/
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/blackliststokens-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/blackliststokens-get-openapi.md
+- name: Auth0 API - Post Blacklists Tokens
+  x-api-slug: blackliststokens-post
+  description: Post blacklists tokens.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
+  humanURL: https://auth0.com/
+  baseURL: https://login.auth0.com/api/v2/
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/blackliststokens-post-openapi.md
+- name: Auth0 Blacklists API - Get Blacklists Tokens
+  x-api-slug: apiv2blackliststokens-get
+  description: Get blacklists tokens.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
+  humanURL: https://auth0.com/
+  baseURL: https://login.auth0.com//blacklists
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-get-openapi.md
-- name: Auth0 Blacklists API Post Blacklists Tokens
-  x-api-slug: auth0-blacklists-api
+- name: Auth0 Blacklists API - Post Blacklists Tokens
+  x-api-slug: apiv2blackliststokens-post
   description: Post blacklists tokens.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
   humanURL: https://auth0.com/
-  baseURL: https://login.auth0.com//blacklists//api/v2/blacklists/tokens
-  tags: Blacklists,Tokens
+  baseURL: https://login.auth0.com//blacklists
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-post-openapi.md
-- name: Auth0 Blacklists API
-  x-api-slug: auth0-blacklists-api
-  description: The new way to solve Identity
+- name: Auth0 Blacklists API - Get Blacklists Tokens
+  x-api-slug: apiv2blackliststokens-get
+  description: Get blacklists tokens.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
   humanURL: https://auth0.com/
   baseURL: https://login.auth0.com//blacklists
-  tags: Tokens
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-get-openapi.md
+- name: Auth0 Blacklists API - Post Blacklists Tokens
+  x-api-slug: apiv2blackliststokens-post
+  description: Post blacklists tokens.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11272-auth0.jpg
+  humanURL: https://auth0.com/
+  baseURL: https://login.auth0.com//blacklists
+  tags: Authentication, OAuth, Target, Service Level Agreement, Stack Network, Technology,
+    SaaS, Enterprise, API Service Provider, Identities, Profiles, Relative Data, Service
+    API, Authentication, Users
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/auth0/apiv2blackliststokens-post-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://attom.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://auth0.stack.network
 - type: x-blog
   url: https://auth0.com/blog/
 - type: x-blog-rss

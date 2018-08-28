@@ -1,10 +1,9 @@
----
 swagger: "2.0"
 x-collection-name: Server Density
 x-complete: 1
 info:
-  title: Tokens API
-  description: the-tokens-api-
+  title: Widgets API
+  description: the-widgets-api-
   version: 1.0.0
 host: api.serverdensity.io.
 schemes:
@@ -123,4 +122,3 @@ paths:
           description: sf_external_accept_allow
       tags:
       - Tokens
----

@@ -107,6 +107,81 @@ paths:
       - Accounts
       - Connect
       - Tokens
+    post:
+      summary: Post Accounts Connect Tokens
+      description: Obtains a new connect_token for a specific account.
+      operationId: Create_obtainNewAccountConnectToken_
+      x-api-path-slug: accountsidconnect-tokens-post
+      parameters:
+      - in: query
+        name: callback_url
+        description: When the users mailbox is connected to your API key, the browser
+          will call this url (GET)
+      - in: query
+        name: email
+        description: The email address of the account to be added
+      - in: query
+        name: first_name
+        description: First name of the account holder
+      - in: path
+        name: id
+        description: Unique id of an account accessible through your API key
+      - in: query
+        name: last_name
+        description: Last name of the account holder
+      - in: query
+        name: service_level
+        description: Sets the service level of the accounts source to be created
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+      - Connect
+      - Tokens
+  /accounts/{id}/connect_tokens/{token}:
+    get:
+      summary: Get Accounts Connect Tokens Token
+      description: Gets information about a given connect token.
+      operationId: getAccountConnectToken_
+      x-api-path-slug: accountsidconnect-tokenstoken-get
+      parameters:
+      - in: path
+        name: id
+        description: Unique id of an account accessible through your API key
+      - in: path
+        name: token
+        description: The unique random token used to add a second source to an existing
+          account
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+      - Connect
+      - Tokens
+      - Token
+    delete:
+      summary: Delete Accounts Connect Tokens Token
+      description: Remove a given connect token.
+      operationId: removeAccountConnectToken_
+      x-api-path-slug: accountsidconnect-tokenstoken-delete
+      parameters:
+      - in: path
+        name: id
+        description: Unique id of an account accessible through your API key
+      - in: path
+        name: token
+        description: The unique random token used to add a second source to an existing
+          account
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+      - Connect
+      - Tokens
+      - Token
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

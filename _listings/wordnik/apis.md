@@ -11,36 +11,28 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2708-wordn
 x-kinRank: "8"
 x-alexaRank: "46540"
 tags: Tokens
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/wordnik/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Wordnik Returns usage statistics for the API account.
-  x-api-slug: wordnik
+- name: Wordnik - Returns usage statistics for the API account.
+  x-api-slug: account-jsonapitokenstatus-get
   description: Returns usage statistics for the api account..
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2708-wordnik.jpg
   humanURL: http://wordnik.com
-  baseURL: https://api.wordnik.com//v4//account.json/apiTokenStatus
-  tags: Account,ApiTokenStatus
+  baseURL: https://api.wordnik.com//v4
+  tags: Content, Dictionary, internet, Technology, General Data
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/wordnik/account-jsonapitokenstatus-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/wordnik/account-jsonapitokenstatus-get-openapi.md
-- name: Wordnik
-  x-api-slug: wordnik
-  description: The Wordnik API lets you request definitions, example sentences, spelling
-    suggestions, related words like synonyms and antonyms, phrases containing a given
-    word, word autocompletion, random words, words of the day, and much more.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2708-wordnik.jpg
-  humanURL: http://wordnik.com
-  baseURL: https://api.wordnik.com//v4
-  tags: Tokens
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/tokens/master/_listings/wordnik/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://wikipedia.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://wordnik.stack.network
 - type: x-crunchbase
   url: https://crunchbase.com/organization/wordnik
 - type: x-developer
